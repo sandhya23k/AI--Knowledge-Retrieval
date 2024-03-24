@@ -1,0 +1,599 @@
+[
+    {
+        "input_nodes": [
+            {
+                "label": "bowl",
+                "states": [
+                    "empty"
+                ],
+                "ingredients": [],
+                "container": null
+            },
+            {
+                "label": "spinach",
+                "states": [
+                    "leaf"
+                ],
+                "ingredients": [],
+                "container": "bowl"
+            },
+            {
+                "label": "water",
+                "states": [
+                    "liquid"
+                ],
+                "ingredients": [],
+                "container": "bowl"
+            }
+        ],
+        "motion_node": "wash",
+        "output_nodes": [
+            {
+                "label": "spinach",
+                "states": [
+                    "leaf",
+                    "washed"
+                ],
+                "ingredients": [],
+                "container": "bowl"
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "blender",
+                "states": [
+                    "empty"
+                ],
+                "ingredients": [],
+                "container": null
+            },
+            {
+                "label": "spinach",
+                "states": [
+                    "leaf",
+                    "washed"
+                ],
+                "ingredients": [],
+                "container": "bowl"
+            }
+        ],
+        "motion_node": "pick-and-place",
+        "output_nodes": [
+            {
+                "label": "blender",
+                "states": [],
+                "ingredients": [
+                    "spinach"
+                ],
+                "container": null
+            },
+            {
+                "label": "spinach",
+                "states": [
+                    "leaf",
+                    "washed"
+                ],
+                "ingredients": [],
+                "container": "blender"
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "spinach",
+                "states": [
+                    "leaf",
+                    "washed"
+                ],
+                "ingredients": [],
+                "container": "blender"
+            },
+            {
+                "label": "blender",
+                "states": [],
+                "ingredients": [
+                    "spinach"
+                ],
+                "container": null
+            }
+        ],
+        "motion_node": "blend",
+        "output_nodes": [
+            {
+                "label": "spinachblender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach"
+                ],
+                "container": "blender"
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "spinachblender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "milk",
+                "states": [
+                    "liquid"
+                ],
+                "ingredients": [],
+                "container": "bowl"
+            }
+        ],
+        "motion_node": "pour",
+        "output_nodes": [
+            {
+                "label": "spinachblender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "milk",
+                "states": [
+                    "liquid"
+                ],
+                "ingredients": [],
+                "container": "blender"
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "spinachblender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "milk",
+                "states": [
+                    "liquid"
+                ],
+                "ingredients": [],
+                "container": "blender"
+            }
+        ],
+        "motion_node": "blend",
+        "output_nodes": [
+            
+            {
+                "label": "spinachmilkblender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk"
+                ],
+                "container": "blender"
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "spinachmilkblender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "flaxseeds",
+                "states": [
+                    "ground"
+                ],
+                "ingredients": [],
+                "container": "bowl"
+            }
+        ],
+        "motion_node": "add",
+        "output_nodes": [
+            {
+                "label": "spinachmilkblender",
+                "states": [
+                    "blended",
+                    "liquid",
+                    "seeds"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "flaxseeds",
+                "states": [
+                    "ground"
+                ],
+                "ingredients": [],
+                "container": "blender"
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "blender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "blender",
+                "states": [],
+                "ingredients": [
+                    "seeds"
+                ],
+                "container": null
+            },
+            {
+                "label": "seeds",
+                "states": [
+                    "ground"
+                ],
+                "ingredients": [],
+                "container": "blender"
+            }
+        ],
+        "motion_node": "blend",
+        "output_nodes": [
+            {
+                "label": "blender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds"
+                ],
+                "container": "blender"
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "blender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "banana",
+                "states": [
+                    "peeled"
+                ],
+                "ingredients": [],
+                "container": "bowl"
+            }
+        ],
+        "motion_node": "pick-and-place",
+        "output_nodes": [
+            {
+                "label": "blender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds",
+                    "banana"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "banana",
+                "states": [
+                    "peeled"
+                ],
+                "ingredients": [],
+                "container": "blender"
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "blender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds",
+                    "banana"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "avocado",
+                "states": [
+                    "peeled"
+                ],
+                "ingredients": [],
+                "container": "bowl"
+            }
+        ],
+        "motion_node": "pick-and-place",
+        "output_nodes": [
+            {
+                "label": "blender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds",
+                    "banana",
+                    "avocado"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "avocado",
+                "states": [
+                    "peeled"
+                ],
+                "ingredients": [],
+                "container": "blender"
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "blender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds",
+                    "banana",
+                    "avocado"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "avocado",
+                "states": [
+                    "peeled"
+                ],
+                "ingredients": [],
+                "container": "blender"
+            },
+            {
+                "label": "banana",
+                "states": [
+                    "peeled"
+                ],
+                "ingredients": [],
+                "container": "blender"
+            },
+            {
+                "label": "milk",
+                "states": [
+                    "liquid"
+                ],
+                "ingredients": [],
+                "container": "blender"
+            },
+            {
+                "label": "spinnach",
+                "states": [
+                    "leaf"
+                ],
+                "ingredients": [],
+                "container": "blender"
+            },
+            {
+                "label": "seeds",
+                "states": [
+                    "ground"
+                ],
+                "ingredients": [],
+                "container": "blender"
+            }
+        ],
+        "motion_node": "blend",
+        "output_nodes": [
+            {
+                "label": "blender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds",
+                    "avocado",
+                    "banana"
+                ],
+                "container": "blender"
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "blender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds",
+                    "avocado",
+                    "banana"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "ice",
+                "states": [
+                    "cubed"
+                ],
+                "ingredients": [],
+                "container": "bowl"
+            }
+        ],
+        "motion_node": "pour",
+        "output_nodes": [
+            {
+                "label": "blender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds",
+                    "avocado",
+                    "banana",
+                    "ice"
+                ],
+                "container": "blender"
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "blender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds",
+                    "avocado",
+                    "banana",
+                    "ice"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "glass",
+                "states": [
+                    "empty"
+                ],
+                "ingredients": [],
+                "container": null
+            }
+        ],
+        "motion_node": "pour",
+        "output_nodes": [
+            {
+                "label": "blender",
+                "states": [
+                    "blended",
+                    "liquid"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds",
+                    "avocado",
+                    "banana",
+                    "ice",
+                    "glass"
+                ],
+                "container": "blender"
+            },
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "mixture"
+                ],
+                "container": null
+            },
+            {
+                "label": "mixture",
+                "states": [
+                    "liquid",
+                    "blended"
+                ],
+                "ingredients": [
+                    "spinach",
+                    "milk",
+                    "seeds",
+                    "avocado",
+                    "banana",
+                    "ice"
+                ],
+                "container": "glass"
+            }
+        ]
+    }
+]

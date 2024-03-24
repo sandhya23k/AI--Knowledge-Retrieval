@@ -1,0 +1,422 @@
+[
+    {
+        "input_nodes": [
+            {
+                "label": "glass",
+                "states": [
+                    "empty"
+                ],
+                "ingredients": [],
+                "container": null
+            },
+            {
+                "label": "cream",
+                "states": [
+                    "creamy"
+                ],
+                "ingredients": [],
+                "container": "bowl"
+            }
+        ],
+        "motion_node": "pour",
+        "output_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream"
+                ],
+                "container": null
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream"
+                ],
+                "container": null
+            },
+            {
+                "label": "liquidmilk",
+                "states": [
+                    "liquid"
+                ],
+                "ingredients": [],
+                "container": "cup"
+            }
+        ],
+        "motion_node": "pour",
+        "output_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk"
+                ],
+                "container": null
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk"
+                ],
+                "container": null
+            },
+            {
+                "label": "liquidmilk",
+                "states": [
+                    "liquid"
+                ],
+                "ingredients": [],
+                "container": "cup"
+            }
+        ],
+        "motion_node": "pour",
+        "output_nodes": [
+            {
+                "label": "cream",
+                "states": [
+                    "creamy"
+                ],
+                "ingredients": [],
+                "container": "bowl"
+            },
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk"
+                ],
+                "container": null
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk"
+                ],
+                "container": null
+            },
+            {
+                "label": "liquidmilk",
+                "states": [
+                    "liquid"
+                ],
+                "ingredients": [],
+                "container": "cup"
+            }
+        ],
+        "motion_node": "pour",
+        "output_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk"
+                ],
+                "container": null
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk"
+                ],
+                "container": null
+            },
+            {
+                "label": "liquidmilk",
+                "states": [
+                    "liquid"
+                ],
+                "ingredients": [],
+                "container": "cup"
+            }
+        ],
+        "motion_node": "pour",
+        "output_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk"
+                ],
+                "container": null
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "bottle",
+                "states": [],
+                "ingredients": [
+                    "extract"
+                ],
+                "container": null
+            },
+            {
+                "label": "liquid",
+                "states": [
+                    "extract"
+                ],
+                "ingredients": [],
+                "container": "bottle"
+            }
+        ],
+        "motion_node": "pour",
+        "output_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk",
+                    "extract"
+                ],
+                "container": null
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk",
+                    "extract"
+                ],
+                "container": null
+            },
+            {
+                "label": "peelsherbet",
+                "states": [
+                    "creamy"
+                ],
+                "ingredients": [],
+                "container": "bowl"
+            }
+        ],
+        "motion_node": "pick-and-place",
+        "output_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk",
+                    "extract",
+                    "sherbet"
+                ],
+                "container": null
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk",
+                    "extract",
+                    "sherbet"
+                ],
+                "container": null
+            },
+            {
+                "label": "spoon",
+                "states": [],
+                "ingredients": [],
+                "container": null
+            }
+        ],
+        "motion_node": "stir",
+        "output_nodes": [
+            {
+                "label": "mixture",
+                "states": [
+                    "blended"
+                ],
+                "ingredients": [
+                    "cream",
+                    "sherbet",
+                    "milk",
+                    "extract"
+                ],
+                "container": "glass"
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk",
+                    "extract",
+                    "sherbet"
+                ],
+                "container": null
+            },
+            {
+                "label": "liquidcoffee",
+                "states": [
+                    "liquid"
+                ],
+                "ingredients": [],
+                "container": "cup"
+            }
+        ],
+        "motion_node": "pour",
+        "output_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk",
+                    "extract",
+                    "sherbet",
+                    "coffee"
+                ],
+                "container": null
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk",
+                    "extract",
+                    "sherbet",
+                    "coffee"
+                ],
+                "container": null
+            }
+        ],
+        "motion_node": "stir",
+        "output_nodes": [
+            {
+                "label": "mixture",
+                "states": [
+                    "blended"
+                ],
+                "ingredients": [
+                    "cream",
+                    "sherbet",
+                    "milk",
+                    "extract",
+                    "coffee"
+                ],
+                "container": "glass"
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk",
+                    "extract",
+                    "sherbet",
+                    "coffee"
+                ],
+                "container": null
+            },
+            {
+                "label": "ice",
+                "states": [
+                    "granulated"
+                ],
+                "ingredients": [],
+                "container": "bowl"
+            }
+        ],
+        "motion_node": "pour",
+        "output_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk",
+                    "extract",
+                    "sherbet",
+                    "coffee",
+                    "ice"
+                ],
+                "container": null
+            }
+        ]
+    },
+    {
+        "input_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "cream",
+                    "liquidmilk",
+                    "extract",
+                    "sherbet",
+                    "coffee",
+                    "ice"
+                ],
+                "container": null
+            }
+        ],
+        "motion_node": "pour",
+        "output_nodes": [
+            {
+                "label": "glass",
+                "states": [],
+                "ingredients": [
+                    "ice",
+                    "sherbet",
+                    "cream",
+                    "liquidmilk",
+                    "extract",
+                    "coffee"
+                ],
+                "container": null
+            }
+        ]
+    }
+]

@@ -1,0 +1,34 @@
+Recipe:1
+1.I have added the output node "cream" for the first input node at line "32" as the container for that
+  label has been changed.
+2.Deleted the nodes from 66-172(given json file). as they are repetitive and not as per the text given. We don'tneed them.
+3.Changed the input node at line 173 as the label 'bottle' is not necessary . The label that is spposed to present is the glass.
+  The output node of the previous node. And changed the ingredient name to 'liquid ectract'
+4.added the input node spoon at line 231(modified file) as we are using it for stirring.
+5.I have changed the input and motion node nad output node of the last node(given json file) as per the text file given.
+   i.e motion_node to mix. Output node label to "mixture", container to "glass"
+
+
+Recipe 2:
+1.In the modified json file I ahve added a new input node at line 12 for "water" as in the text file it is given that the peach is washed.
+  and added the respective motion node and the output node.
+2.I have taken the output of the first node as the input for the next one. For the output of the second node at line 57 I have added a new
+   state "washed".
+3.In the given json file they haven't added a node for cutting the banana. So at Line 114 I have added a new node for banana cutting.
+4.After this I have added a two new nodes for adding peach and banana to the blender and for washing the spinach from Line 133-206.
+5.At Line 222 I have added spinach to the blender and then added the state "washed" for spinach.
+6.At Line 282 in the modified file I have changed the container to "blender" which was "null" in the given original json file.
+7.At Line 351 I have added "water" as output node within container "blender"
+8.I have removed lines 239-278 from the original json file as they are repetetive and not required. Same as the above nodes.
+
+Recipe 3:
+1.From the original json file given, I have removed label "glass" at Line 117, as it is not required. We are not making use of glass at that step.
+2.For line 129 of original json, I have changed the label to "spinachblender"
+3.The same for line 175.
+4.I have removed the lines from 193-201 and 212-225 and from 248-263 as they have already been added to the blender.
+  As per the given the text file. It is not required to add those nodes.
+5.Removed leaf state from line 280. As spinach is already blended so it has state "liquid".
+6.Added the output node "flaxseeds" at line 243 in the modified json file.
+7.Removed the lines 517-532 and from 553-568 as those ingredients are already added to the blender and blended.
+8.At last the mixture is poured into the glass. So changes the container to "glass"
+ 
